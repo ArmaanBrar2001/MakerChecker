@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC   "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory> <!-- Database connection settings -->
+        <property name="connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+        <property name="connection.url">jdbc:oracle:thin:@10.1.50.198:1535/nsbt19c</property>
+        <property name="connection.username">sh</property>
+        <property name="connection.password">sh</property>
+        <!-- JDBC connection pool (use the built-in) -->
+        <property name="connection.pool_size">5</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property><!--
+         SQL dialect -->
+        <!-- Disable the second-level cache  -->
+        <property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
+<!--        <property name="show_sql">true</property> &lt;!&ndash; Echo all executed SQL to stdout &ndash;&gt;-->
+        <property name="hbm2ddl.auto">create</property>
+        <!-- Mention here all the model classes along with their package name -->
+        <mapping class="com.model.entity.Temp_Customer_16892" />
+        <mapping class="com.model.entity.Master_Customer_16892" />
+<!--        <mapping class="com.model.dto.CustomerDto"/>-->
+<!--        <mapping class="com.service.serviceimplementations.CustomerMasterService"/>-->
+    </session-factory>
+</hibernate-configuration>

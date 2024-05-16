@@ -1,0 +1,1 @@
+<h2>You are not authorized to go to this page</h2>
